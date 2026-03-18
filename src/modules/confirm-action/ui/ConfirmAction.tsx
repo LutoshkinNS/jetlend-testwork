@@ -31,11 +31,14 @@ export function ConfirmAction() {
   };
 
   return (
-    <section>
-      <h1>Task 7</h1>
-      <div>
-        <button onClick={handleAction}>Выполнить действие</button>
-      </div>
+    <section className="flex flex-col items-start gap-4 p-6">
+      <h1 className="text-2xl font-bold text-gray-900">Task 7</h1>
+      <button
+        onClick={handleAction}
+        className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
+      >
+        Выполнить действие
+      </button>
     </section>
   );
 }

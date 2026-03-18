@@ -13,8 +13,10 @@
     "prettier:write": "npx prettier . --write"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.1",
     "react": "~19.2.0",
-    "react-dom": "~19.2.0"
+    "react-dom": "~19.2.0",
+    "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
     "@eslint/js": "~9.39.1",
@@ -31,6 +33,7 @@
     "globals": "~16.5.0",
     "jsdom": "~27.0.1",
     "prettier": "~3.8.1",
+    "prettier-plugin-tailwindcss": "~0.7.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "~8.46.4",
     "vite": "~7.2.4",
