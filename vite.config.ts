@@ -8,6 +8,11 @@ export default defineConfig(({mode}) => {
 
     return {
         plugins: [react()],
+        resolve: {
+            alias: {
+                '@': path.resolve(__dirname, './src'),
+            },
+        },
         publicDir: path.resolve(__dirname, "./src/app/public"),
         server: {
             cors: false,
