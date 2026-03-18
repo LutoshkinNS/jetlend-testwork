@@ -1,17 +1,21 @@
-import { useMemo, useState } from 'react';
-import { confirmationContext } from './confirmation';
-import { ConfirmationDialog } from './ConfirmationDialog';
+import { useMemo, useState } from "react";
+import { confirmationContext } from "./confirmation";
+import { ConfirmationDialog } from "./ConfirmationDialog";
 import type {
   ConfirmationDialogProps,
   ConfirmationProps,
   ConfirmSlotProps,
-} from './types';
+} from "./types";
 
 function DefaultConfirmButton({ onConfirm }: ConfirmSlotProps) {
   return <button onClick={onConfirm}>Подтвердить</button>;
 }
 
-export function ConfirmationsProvider({ children }: { children: React.ReactNode }) {
+export function ConfirmationsProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [dialogProps, setDialogProps] = useState<ConfirmationDialogProps>();
 
   const contextValue = useMemo(() => {
@@ -21,10 +25,10 @@ export function ConfirmationsProvider({ children }: { children: React.ReactNode 
 
     const getConfirmation = ({
       shouldCloseOnConfirm = true,
-      rejectText = 'Отмена',
+      rejectText = "Отмена",
       ConfirmSlot = DefaultConfirmButton,
-      title = 'Подтверждение',
-      description = 'Вы уверены?',
+      title = "Подтверждение",
+      description = "Вы уверены?",
     }: ConfirmationProps = {}): Promise<boolean> => {
       return new Promise<boolean>((resolve) => {
         const onConfirm = () => {

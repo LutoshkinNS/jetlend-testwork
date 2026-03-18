@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export function useCountdown(
   from: number,
   isActive: boolean,
-  sessionKey: number
+  sessionKey: number,
 ): { remaining: number; isComplete: boolean } {
   const [remaining, setRemaining] = useState(from);
 

@@ -1,5 +1,5 @@
-import { memo, useEffect, useRef } from 'react';
-import type { ConfirmationDialogProps } from './types';
+import { memo, useEffect, useRef } from "react";
+import type { ConfirmationDialogProps } from "./types";
 
 export const ConfirmationDialog = memo(function ConfirmationDialog({
   title,

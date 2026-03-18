@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { useGetConfirmation } from '@/common/ui/confirmation';
-import { ConfirmButton } from './ConfirmButton';
+import { useState } from "react";
+import { useGetConfirmation } from "@/common/ui/confirmation";
+import { ConfirmButton } from "./ConfirmButton";
 
 export function ConfirmAction() {
   const { getConfirmation } = useGetConfirmation();
   const [isConfirmed, setIsConfirmed] = useState(false);
 
   const performAction = () => {
-    alert('Действие выполнено');
+    alert("Действие выполнено");
   };
 
   const handleAction = async () => {
@@ -17,8 +17,9 @@ export function ConfirmAction() {
     }
 
     const confirmed = await getConfirmation({
-      title: 'Согласие с правилами',
-      description: 'Пожалуйста, ознакомьтесь с правилами и подтвердите своё согласие. Кнопка подтверждения станет доступна через несколько секунд.',
+      title: "Согласие с правилами",
+      description:
+        "Пожалуйста, ознакомьтесь с правилами и подтвердите своё согласие. Кнопка подтверждения станет доступна через несколько секунд.",
       ConfirmSlot: ConfirmButton,
       shouldCloseOnConfirm: true,
     });
