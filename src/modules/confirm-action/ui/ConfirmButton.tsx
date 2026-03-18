@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { ConfirmSlotProps } from "@/common/ui/confirmation";
-import { useCountdown } from "@/modules/confirm-action/model/useCountdown";
+import { useCountdown } from "../model/useCountdown";
 
 export function ConfirmButton({ onConfirm }: ConfirmSlotProps) {
   const [openedAt] = useState(() => Date.now());
