@@ -1,8 +1,13 @@
+import {ConfirmAction} from '@/modules/confirm-action';
+import {AppProviders} from './AppProviders.tsx'
+
 function App() {
     return (
-        <div>
-            Start
-        </div>
+        <AppProviders>
+            <main>
+                <ConfirmAction/>
+            </main>
+        </AppProviders>
     );
 }
 
