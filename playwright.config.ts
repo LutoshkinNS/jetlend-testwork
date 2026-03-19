@@ -2,7 +2,7 @@ import { defineConfig } from "@playwright/test";
 import "dotenv/config";
 
 export default defineConfig({
-  testDir: "./src/modules/confirm-action",
+  testDir: "./src",
   testMatch: "**/*.spec.ts",
   use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL,

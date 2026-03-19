@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
       port: 3001,
       strictPort: true,
       proxy: {
-        "/api": {
+        "/media/files/hr/frontend": {
           target: env.VITE_API_URL,
           changeOrigin: true,
           secure: false,
