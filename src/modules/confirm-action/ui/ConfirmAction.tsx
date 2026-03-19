@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "@/common/ui/button";
 import { useGetConfirmation } from "@/common/ui/confirmation";
 import { ConfirmButton } from "./ConfirmButton";
 
@@ -33,12 +34,7 @@ export function ConfirmAction() {
   return (
     <section className="flex flex-col items-start gap-4 p-6">
       <h1 className="text-2xl font-bold text-gray-900">Task 7</h1>
-      <button
-        onClick={handleAction}
-        className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
-      >
-        Выполнить действие
-      </button>
+      <Button onClick={handleAction}>Выполнить действие</Button>
     </section>
   );
 }
