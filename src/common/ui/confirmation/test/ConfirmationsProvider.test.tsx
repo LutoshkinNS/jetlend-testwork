@@ -4,7 +4,11 @@ import { ConfirmationsProvider } from "../ConfirmationsProvider.tsx";
 import { useGetConfirmation } from "../confirmation.ts";
 
 beforeEach(() => {
-  HTMLDialogElement.prototype.showModal = vi.fn();
+  HTMLDialogElement.prototype.showModal = vi.fn(function (
+    this: HTMLDialogElement,
+  ) {
+    this.setAttribute("open", "");
+  });
 });
 
 function TestConsumer({

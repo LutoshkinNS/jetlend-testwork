@@ -3,7 +3,11 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { ConfirmationDialog } from "../ConfirmationDialog.tsx";
 
 beforeEach(() => {
-  HTMLDialogElement.prototype.showModal = vi.fn();
+  HTMLDialogElement.prototype.showModal = vi.fn(function (
+    this: HTMLDialogElement,
+  ) {
+    this.setAttribute("open", "");
+  });
 });
 
 describe("ConfirmationDialog", () => {
